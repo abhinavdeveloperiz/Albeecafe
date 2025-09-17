@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+
+<body class="bg-gray-50">
+
+    <!-- Carousel Wrapper -->
+    <div class="relative w-full h-[100vh] overflow-hidden">
+        <!-- Slides -->
+        <div class="carousel flex transition-transform duration-700 ease-in-out">
+            <!-- Slide 1 -->
+            <div class="w-full h-100 flex-shrink-0 relative">
+                <img src="/static/images/banner_image.jpg" class="w-full h-[100vh] object-cover object-left"
+                    alt="Cafe Interior">
+                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
+
+                    <!-- Small tagline -->
+                    <p class="text-yellow-400 text-sm md:text-lg uppercase tracking-[6px] mb-3 font-semibold"
+                        data-aos="fade-down">
+                        Fresh • Cozy • Delicious
+                    </p>
+
+                    <!-- Heading -->
+                    <h2 class="text-white text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight"
+                        data-aos="fade-up">
+                        Welcome to <span class="text-yellow-400">Albee Cafe</span>
+                    </h2>
+
+                    <!-- Subtext -->
+                    <p class="text-gray-200 text-base md:text-lg max-w-xl mb-8 leading-relaxed" data-aos="fade-up">
+                        Experience the perfect blend of freshly brewed coffee, tasty bites, and a warm,
+                        cozy atmosphere designed just for you.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <a href="#menu"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full shadow-xl transition-transform transform hover:scale-105 animate-bounce">
+                        <i class="fas fa-chevron-down"></i>
+
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full h-100 flex-shrink-0 relative">
+                <img src="/static/images/banner_image_2.jpg" class="w-full h-[100vh] object-cover object-left"
+                    alt="Cafe Food">
+                <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
+
+                    <!-- Small tagline -->
+                    <p class="text-yellow-400 text-sm md:text-lg uppercase tracking-[6px] mb-3 font-semibold">
+                        Sweet • Savory • Perfect
+                    </p>
+
+                    <!-- Heading -->
+                    <h2 class="text-white text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-tight">
+                        Delicious Bites & <span class="text-yellow-400">Treats</span>
+                    </h2>
+
+                    <!-- Subtext -->
+                    <p class="text-gray-200 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+                        Enjoy freshly prepared snacks and desserts, each crafted to pair perfectly with
+                        your favorite coffee.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <a href="/contact"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full shadow-xl transition-transform transform hover:scale-105">
+                        Visit Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prev"
+            class="absolute top-1/2 -translate-y-1/2 left-5 bg-black/40 text-white p-3 rounded-full hover:bg-black/70">
+            ❮
+        </button>
+        <button id="next"
+            class="absolute top-1/2 -translate-y-1/2 right-5 bg-black/40 text-white p-3 rounded-full hover:bg-black/70">
+            ❯
+        </button>
+    </div>
+
+
+
+
+
+    <section class="relative bg-gray-100 py-16" id="menu">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Image -->
+            <div>
+                <img src="{% static 'images/about.jpg' %}" alt="Coffee Brewing" data-aos="fade-up"
+                    class="w-full h-[400px] object-cover rounded-xl shadow-lg">
+            </div>
+
+            <!-- Content -->
+            <div class="text-center md:text-left" data-aos="fade-down">
+                <p class="text-yellow-500 uppercase tracking-[6px] mb-3 font-semibold">
+                    Signature Brews
+                </p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4">
+                    Crafted With <span class="text-yellow-500">Passion</span>
+                </h2>
+                <p class="text-gray-600 mb-6 leading-relaxed text-justify">
+                    Albee Resto Café will be a food truck offering a unique food experience with a fusion
+                    of traditional Middle Eastern flavors and contemporary international cuisine. Our mission is to
+                    provide high-quality, innovative, and affordable snacks and desserts to the residents of Public park
+                    Dubai community especially kids who are coming to Public play area of Dubai.
+
+                </p>
+                <a href="/about"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="relative bg-fixed bg-center bg-cover h-[350px] flex items-center justify-center text-center"
+        style="background-image: url('/static/product/p11.jpg');">
+        <div class="bg-black/40 absolute inset-0"></div> <!-- overlay for readability -->
+
+        <div class="relative z-10 px-6">
+            <!-- Small text -->
+            <p class="text-white tracking-wide text-sm md:text-lg mb-3 font-[Poppins]">
+                <span class="mx-2">───</span> JELLY TASTES BEST <span class="mx-2">───</span>
+            </p>
+
+            <!-- Cursive & Bold mix -->
+            <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight">
+                <span class="block font-[Pacifico] text-4xl md:text-5xl">Crafted with passion</span>
+                <span class="block text-5xl md:text-7xl font-extrabold text-yellow-400">FLAVOR</span>
+            </h1>
+
+            <!-- Button -->
+            <a href="/about"
+                class="inline-block mt-6 px-6 py-3 bg-red-600 text-white font-semibold rounded-full shadow-lg hover:bg-red-700 transition">
+                READ OUR STORY
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <section class="w-full flex flex-col md:flex-row flex-wrap bg-black">
+        <!-- Card 1 -->
+        <div class="w-full md:w-1/2 lg:w-1/3 relative" data-aos="fade-up">
+            <img src="/static/gif/p1.gif" alt="Cake" class="w-full h-[500px] md:h-[550px] lg:h-[600px] object-cover">
+            <div class="absolute inset-0   transition flex items-end justify-center pb-6">
+                <a href="/product"
+                    class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-full shadow-md">
+                    WHAT'S NEW
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-full md:w-1/2 lg:w-1/3 relative" data-aos="fade-down">
+            <img src="/static/gif/p2.gif" alt="Coffee Location"
+                class="w-full h-[500px] md:h-[550px] lg:h-[600px] object-cover">
+            <div class="absolute inset-0 transition flex items-end justify-center pb-6">
+                <a href="/product"
+                    class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-full shadow-md">
+                    MOST FAVORITES
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-full md:w-1/2 lg:w-1/3 relative" data-aos="fade-up">
+            <img src="/static/gif/p3.gif" alt="Coffee Pack"
+                class="w-full h-[500px] md:h-[550px] lg:h-[600px] object-cover">
+            <div class="absolute inset-0  transition flex items-end justify-center pb-6">
+                <a href="/about"
+                    class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-full shadow-md">
+                    ABOUT US
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- additional sections  -->
+
+
+
+
+    <section class="relative bg-fixed bg-center bg-cover h-[400px] flex items-center justify-center text-center"
+        style="background-image: url('/static/product/p2.jpg');">
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 px-6">
+            <p class="text-yellow-400 text-sm md:text-lg uppercase tracking-[6px] mb-3 font-semibold">
+             ───</span> Sweet Moments <span class="mx-2">───</span>
+            </p>
+            <h2 class="text-white text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                Freshly Baked <span class="text-yellow-400">Desserts</span>
+            </h2>
+            <p class="text-gray-200 text-base md:text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
+                Indulge in our cakes, pastries, and desserts made daily by our talented chefs —
+                perfect companions to your favorite coffee.
+            </p>
+            <a href="/product"
+                class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg">
+                Explore Desserts
+            </a>
+        </div>
+    </section>
+
+
+
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-yellow-500 uppercase tracking-[6px] mb-3 font-semibold">
+                Why Choose Us
+            </p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-12">
+                More Than Just Coffee
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <img src="https://img.icons8.com/ios-filled/100/coffee.png" alt="Quality Beans"
+                        class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-bold mb-3">Premium Beans</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We source only the finest beans from ethical farms to ensure
+                        rich, aromatic coffee every time.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <img src="https://img.icons8.com/ios-filled/100/croissant.png" alt="Fresh Bakes"
+                        class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-bold mb-3">Fresh Bakes</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our croissants, muffins, and cakes are baked daily —
+                        perfect to pair with your favorite brew.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition">
+                    <img src="https://img.icons8.com/ios-filled/100/sofa.png" alt="Cozy Space"
+                        class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-bold mb-3">Cozy Ambience</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Whether it’s work, study, or catching up with friends,
+                        our warm interiors make you feel at home.
+                    </p>
+                </div>
+            </div>
+            <a href="/product"
+                class="mx-auto flex justify-center bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg w-32 mt-12"><button>View
+                    More</button></a>
+
+        </div>
+    </section>
+
+
+
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel > div');
+        const totalSlides = slides.length;
+        let index = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            index = (index + 1) % totalSlides;
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            index = (index - 1 + totalSlides) % totalSlides;
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        // Auto slide every 5s
+        setInterval(() => {
+            index = (index + 1) % totalSlides;
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }, 5500);
+    </script>
+</body>
+
+
+{% endblock %}
