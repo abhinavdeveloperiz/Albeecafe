@@ -54,7 +54,7 @@
       /* Gentle readability */
       font-size: 1rem;
       /* Base size */
-      color: #444;
+      color: #b8b8b8;
       /* Soft gray */
     }
 
@@ -71,7 +71,6 @@
       scroll-behavior: smooth;
 
     }
-
   </style>
 
 
@@ -110,17 +109,17 @@
 <!-- Floating WhatsApp & Call Buttons -->
 <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/971505023561" target="_blank"
-        class="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300">
-        <i class="fab fa-whatsapp text-white text-2xl"></i>
-    </a>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/971505023561" target="_blank"
+    class="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
 
-    <!-- Call Button -->
-    <a href="tel:+971505023561"
-        class="flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300">
-        <i class="fas fa-phone-alt text-white text-2xl"></i>
-    </a>
+  <!-- Call Button -->
+  <a href="tel:+971505023561"
+    class="flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transform hover:scale-110 transition-all duration-300">
+    <i class="fas fa-phone-alt text-white text-2xl"></i>
+  </a>
 
 </div>
 
@@ -129,69 +128,59 @@
 
 <body class="bg-gray-50">
 
-  <!-- Updated Navbar -->
-  <nav id="navbar"
-    class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm shadow-sm transition-transform duration-500 ease-in-out z-50 navbar-hidden">
+  <!-- Modern Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-20">
-        <!-- Logo (left-aligned on all screens) -->
-        <div class="flex-shrink-0">
-          <img src="{% static 'images/logo.png' %}" alt="ALBEE CAFE" class="nav-logo">
+
+        <!-- Logo (Bigger) -->
+        <a href="/" class="flex-shrink-0">
+          <img src="{% static 'images/logo.png' %}" alt="ALBEE CAFE"
+            class="h-14 w-auto lg:h-20 transition-all duration-300">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="/"
+            class="text-gray-800 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Home</a>
+          <a href="/about"
+            class="text-gray-800 hover:text-blue-600 text-sm font-medium transition-colors duration-200">About Us</a>
+          <a href="/product"
+            class="text-gray-800 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Products</a>
+          <a href="/gallery"
+            class="text-gray-800 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Gallery</a>
+          <a href="/contact"
+            class="text-gray-800 hover:text-blue-600 text-sm font-medium transition-colors duration-200">Contact</a>
         </div>
 
-        <!-- Desktop Navigation (centered) -->
-        <div class="hidden lg:flex items-center justify-center flex-1">
-          <div class="flex space-x-8">
-            <a href="/"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Home</a>
-            <a href="/about"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">About
-              Us</a>
-            <a href="/product"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Products</a>
-            <a href="/contact"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact
-              Us</a>
-            <a href="/gallery"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Gallery</a>
-          </div>
+        <!-- CTA Button -->
+        <div class="hidden lg:flex">
+         
         </div>
 
-        <!-- Mobile menu button -->
+        <!-- Mobile Menu Button -->
         <div class="lg:hidden">
-          <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2">
+          <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-700 hover:bg-gray-200 focus:outline-none">
             <i id="menu-icon" class="fas fa-bars text-xl"></i>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="/"
-          class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
-          <i class="fas fa-home w-5 mr-3"></i>Home
-        </a>
-        <a href="/about"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-blue-50 border-b border-gray-100">
-          <i class="fas fa-info-circle w-5 mr-3"></i>About Us
-        </a>
-        <a href="/product"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-blue-50 border-b border-gray-100">
-          <i class="fas fa-coffee w-5 mr-3"></i>Products
-        </a>
-        <a href="/contact"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-blue-50 border-b border-gray-100">
-          <i class="fas fa-envelope w-5 mr-3"></i>Contact Us
-        </a>
-        <a href="/gallery"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 hover:bg-blue-50">
-          <i class="fas fa-images w-5 mr-3"></i>Gallery
-        </a>
+    <!-- Mobile Menu (Centered Links) -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-md">
+      <div class="px-4 py-3 space-y-3 text-center">
+        <a href="/" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Home</a>
+        <a href="/about" class="block text-gray-800 hover:text-blue-600 text-base font-medium">About Us</a>
+        <a href="/product" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Products</a>
+        <a href="/gallery" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Gallery</a>
+        <a href="/contact" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Contact</a>
+       
       </div>
     </div>
   </nav>
+
+
 
 
   {% block content %}
@@ -199,193 +188,70 @@
   {% endblock %}
 
   <!-- Advanced Footer -->
-  <footer class="bg-gray-900 text-white">
-    <!-- Main Footer Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-        <!-- Company Info -->
-        <div class="space-y-4 sm:col-span-2 lg:col-span-1">
-          <div class="text-xl lg:text-2xl font-bold">
-            <img src="{% static 'images/logo.png' %}" alt="ALBEE CAFE" class="h-24 w-auto lg:h-24 ">
-          </div>
-          <p class="text-gray-300 leading-relaxed text-sm lg:text-base">
-            Experience the finest coffee and delightful atmosphere at ALBEE CAFE. Your perfect destination for quality
-            beverages and memorable moments.
-          </p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-              <i class="fab fa-facebook-f text-lg lg:text-xl"></i>
-            </a>
+  <!-- Modern Footer -->
+  <footer class="bg-gray-950 text-gray-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-              <i class="fab fa-instagram text-lg lg:text-xl"></i>
-            </a>
-
-            <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-              <i class="fab fa-youtube text-lg lg:text-xl"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-white">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Home</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">About Us</a>
-            </li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Products</a>
-            </li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Menu</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Gallery</a>
-            </li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Contact
-                Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h3 class="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-white">Our Specialties</h3>
-          <ul class="space-y-2">
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Premium
-                Coffee</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Fresh
-                Pastries</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Healthy
-                Smoothies</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Event
-                Catering</a></li>
-            <li><a href="#"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">Private
-                Events</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-white">Contact Info</h3>
-          <div class="space-y-3">
-            <div class="flex items-start space-x-3">
-              <i class="fas fa-map-marker-alt text-blue-400 mt-1 text-sm"></i>
-              <div>
-                <p class="text-gray-300 text-sm lg:text-base">123 Coffee Street</p>
-                <p class="text-gray-300 text-sm lg:text-base">Cafe District, CD 12345</p>
-              </div>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-phone text-blue-400 text-sm"></i>
-              <a href="tel:+971505023561"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">
-                +971505023561
-              </a>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-envelope text-blue-400 text-sm"></i>
-              <a href="mailto:Albeecafe@gmail.com"
-                class="text-gray-300 hover:text-white transition-colors duration-200 text-sm lg:text-base">
-                Albeecafe@gmail.com
-              </a>
-            </div>
-            <div class="flex items-center space-x-3">
-              <i class="fas fa-clock text-blue-400 text-sm"></i>
-              <div>
-                <p class="text-gray-300 text-sm lg:text-base">Mon - Fri: 7AM - 9PM</p>
-                <p class="text-gray-300 text-sm lg:text-base">Sat - Sun: 8AM - 10PM</p>
-              </div>
-            </div>
-          </div>
+      <!-- Brand Info -->
+      <div>
+        <img src="{% static 'images/logo.png' %}" alt="ALBEE CAFE" class="h-20 w-auto mb-4">
+        <p class="text-sm leading-relaxed">
+          Experience the finest coffee and delightful atmosphere at ALBEE CAFE. Your perfect destination for quality
+          beverages and memorable moments.
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/albeecafe/" class="hover:text-pink-500"><i
+              class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About Us</a></li>
+          <li><a href="/product" class="hover:text-white">Products</a></li>
+          <li><a href="/gallery" class="hover:text-white">Gallery</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-white">Contact Info</h3>
+        <p class="text-sm">Global Village, Dubai</p>
+        <p class="mt-2"><a href="tel:+971505023561" class="hover:text-white">+971505023561</a></p>
+        <p><a href="mailto:Albeecafe@gmail.com" class="hover:text-white">Albeecafe@gmail.com</a></p>
+        <p class="mt-2">Mon - Fri: 7AM - 9PM<br>Sat - Sun: 8AM - 10PM</p>
+      </div>
+
     </div>
 
-    <!-- Newsletter Section -->
-
-
-    <!-- Footer Bottom -->
-    <div class="border-t border-gray-800 bg-gray-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
-        <div class="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-          <div class="text-gray-400 text-xs lg:text-sm text-center lg:text-left">
-            © 2025 ALBEE CAFE. All rights reserved.
-          </div>
-          <div class="flex flex-wrap justify-center space-x-4 lg:space-x-6 text-xs lg:text-sm">
-            <a href="https://inspirezesttechnologies.com/"
-              class="text-gray-400 hover:text-white transition-colors duration-200">Designed and Developed by <span
-                class="text-bold text-white">Inspirezest Technologies Pvt Ltd</span></a>
-          </div>
-        </div>
-      </div>
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-10 py-4 text-center text-sm text-gray-500">
+      © {% now 'Y' %} ALBEE CAFE. All rights reserved.
+      <br>
+      <a href="https://inspirezesttechnologies.com/" class="hover:text-white">Designed by <span
+          class="text-white">Inspirezest Technologies Pvt Ltd</span></a>
     </div>
   </footer>
 
+
   <script>
-    // Navbar scroll functionality - Always show when scrolling down from top
-    let lastScrollY = window.scrollY;
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 50) { // Show navbar after scrolling 50px
-        // Always show navbar when scrolled down
-        navbar.classList.remove('navbar-hidden');
-        navbar.classList.add('navbar-visible');
-      } else {
-        // Hide navbar when at the very top
-        navbar.classList.remove('navbar-visible');
-        navbar.classList.add('navbar-hidden');
-      }
-
-      lastScrollY = currentScrollY;
-    });
-
-    // Mobile menu toggle with icon animation
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
 
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
-
-      // Toggle icon between hamburger and X
-      if (mobileMenu.classList.contains('hidden')) {
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-      } else {
-        menuIcon.classList.remove('fa-bars');
-        menuIcon.classList.add('fa-times');
-      }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navbar.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-      }
-    });
-
-    // Close mobile menu on window resize if it's open
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024) { // lg breakpoint
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-      }
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
     });
   </script>
+
 
   <!-- aos animation  -->
   <script>

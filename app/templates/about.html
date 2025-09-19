@@ -2,152 +2,153 @@
 {% load static %}
 {% block content %}
 
-<!-- Banner -->
+<!-- ================= Banner ================= -->
+<section class="relative flex items-center justify-center h-[70vh] bg-fixed bg-cover bg-left"
+    style="background-image: url('/static/images/banner_image.jpg');">
 
-
-<section class="relative py-24 flex justify-center bg-fixed bg-cover overflow-hidden"
-    style="background-image: url('/static/images/banner_image.jpg'); background-position: left;">
-
-    <!-- Overlay -->
-    <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
     <!-- Content -->
     <div class="relative z-10 text-center text-white max-w-4xl px-6">
-
         <!-- Tagline -->
         <p class="uppercase tracking-[6px] text-yellow-400 font-semibold mb-4">
             The Jelly World • Since 2025
         </p>
 
         <!-- Heading -->
-        <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg mb-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-md">
             About <span class="text-yellow-400">Albee Café</span>
         </h1>
 
-        <!-- Description -->
-        <p class="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed">
-            A first-of-its-kind café in the GCC, blending <span class="text-yellow-400 font-semibold">
-            Asian-inspired snow ice, fruit slush, and creamy milk teas</span> with our signature handcrafted
-            jellies and flans. Every dessert is crafted to be fun, flavorful, and Instagram-worthy — giving
-            you a multi-sensory experience in every bite.
-        </p>
-
         <!-- Features row -->
-        <div class="grid grid-cols-3 md:grid-cols-3 gap-6 mb-10">
+        <div class="grid grid-cols-3 gap-6 mt-10 mb-12">
             <div class="flex flex-col items-center">
-                <i class="fas fa-ice-cream text-3xl text-yellow-400 mb-2"></i>
+                <i class="fas fa-ice-cream text-3xl text-yellow-400 animate-bounce"></i>
             </div>
             <div class="flex flex-col items-center">
-                <i class="fas fa-seedling text-3xl text-green-400 mb-2"></i>
+                <i class="fas fa-seedling text-3xl text-green-400 animate-pulse"></i>
             </div>
             <div class="flex flex-col items-center">
-                <i class="fas fa-users text-3xl text-red-400 mb-2"></i>
+                <i class="fas fa-users text-3xl text-red-400 animate-bounce"></i>
             </div>
         </div>
 
         <!-- CTA Buttons -->
-        <div class="flex justify-center space-x-4 mb-12">
+        <div class="flex justify-center space-x-4">
             <a href="/product"
-                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105">
+                class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-3 rounded-full shadow-md transition transform hover:scale-105">
                 Products
             </a>
             <a href="/contact"
-                class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105">
+                class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-full shadow-md transition transform hover:scale-105">
                 Contact
             </a>
         </div>
-
-        <!-- Down Arrow -->
-        <a href="#next-section" class="inline-block text-yellow-400 text-3xl animate-bounce">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-
     </div>
 </section>
 
 
 
-
-
-
-<!-- Company Overview -->
+<!-- ================= Company Overview ================= -->
 <section class="py-16 bg-gray-50" id="next-section">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-            <img src="/static/images/about.jpg" class="rounded-xl shadow-lg" alt="Cafe Interior">
+        <div data-aos="fade-up">
+            <img src="/static/images/about.jpg" 
+                 class="rounded-xl shadow-lg h-[400px] w-full object-cover object-top" 
+                 alt="Cafe Interior">
         </div>
-        <div>
+        <div data-aos="fade-down">
             <h2 class="text-3xl font-extrabold mb-4">Company Overview</h2>
-            <p class="text-gray-600 mb-6 text-justify">Albee Resto Café will be a food truck offering a unique food experience with a
-                fusion
-                of traditional Middle Eastern flavors and contemporary international cuisine. Our mission is to
-                provide high-quality, innovative, and affordable snacks and desserts to the residents of Public park
-                Dubai community especially kids who are coming to Public play area of Dubai..</p>
+            <p class="text-gray-600 text-lg leading-relaxed text-justify">
+                Albee Resto Café is a food truck offering a unique experience with a fusion
+                of traditional Middle Eastern flavors and contemporary international cuisine. 
+                Our mission is to provide high-quality, innovative, and affordable snacks and 
+                desserts to the residents of Dubai — especially children and families visiting 
+                the public park community.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- Mission & Vision -->
-<section class="relative bg-white py-16">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+<!-- ================= Mission & Vision ================= -->
+<section class="relative bg-fixed bg-cover bg-center py-20 text-white "
+    style="background-image: url('/static/product/p5.jpg');">
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center" data-aos="fade-right">
         <div>
-            <h3 class="text-2xl font-bold mb-3 "><i class="fas fa-bullseye text-yellow-500 mr-2"></i> Mission</h3>
-            <p class="text-gray-600 mb-6 text-justify">To introduce a fun, flavorful, and visually stunning dessert experience never
-                seen before in the GCC, combining creativity, premium ingredients, and unforgettable textures.</p>
-            <h3 class="text-2xl font-bold mb-3 "><i class="fas fa-eye text-yellow-500 mr-2"></i> Vision</h3>
-            <p class="text-gray-600 text-justify">To become a beloved community gathering spot known for quality food, impeccable
-                service, and sustainability.</p>
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fas fa-bullseye text-yellow-400 mr-2"></i> Mission
+            </h3>
+            <p class="text-lg leading-relaxed mb-8 text-white text-justify">
+                To introduce a fun, flavorful, and visually stunning dessert experience never seen 
+                before in the GCC, combining creativity, premium ingredients, and unforgettable textures.
+            </p>
+
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fas fa-eye text-yellow-400 mr-2"></i> Vision
+            </h3>
+            <p class="text-lg leading-relaxed text-white text-justify">
+                To become a beloved community gathering spot known for quality food, impeccable 
+                service, and sustainability.
+            </p>
         </div>
         <div>
-            <img src="/static/product/p11.jpg" class="rounded-xl shadow-md" alt="Mission Image">
+            <img src="/static/product/p11.jpg" 
+                 class="rounded-xl shadow-lg h-[400px] w-full object-cover object-top" 
+                 alt="Mission Image">
         </div>
     </div>
 </section>
 
-<!-- Concept & Cuisine -->
-<section class="bg-gray-100 py-16 text-center">
+
+<!-- ================= Concept & Cuisine ================= -->
+<section class="bg-gray-100 py-20 text-center">
     <div class="max-w-5xl mx-auto px-6">
         <h2 class="text-3xl font-extrabold mb-6">Concept & Cuisine</h2>
-        <p class="text-gray-600 mb-8">Offering innovative snow ice, slush, and creamy milk tea topped with our signature
-            handcrafted jellies and flans — a revolutionary dessert experience in the GCC.</p>
-        <div class="grid md:grid-cols-3 gap-6">
+        <p class="text-gray-600 text-lg mb-12 leading-relaxed">
+            Offering innovative snow ice, slush, and creamy milk tea topped with our 
+            signature handcrafted jellies and flans — a revolutionary dessert experience in the GCC.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-                <img src="/static/product/p10.jpg" class="rounded mb-4"
-                    alt="Snow Ice">
-                <h3 class="font-bold">Snow Ice</h3>
+                <img src="/static/product/p10.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Snow Ice">
+                <h3 class="font-bold text-lg">Snow Ice</h3>
             </div>
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-                <img src="/static/product/p2.jpg" class="rounded mb-4"
-                    alt="Fruit Slush">
-                <h3 class="font-bold">Fruit Slush</h3>
+                <img src="/static/product/p2.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Fruit Slush">
+                <h3 class="font-bold text-lg">Fruit Slush</h3>
             </div>
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-                <img src="/static/product/p12.jpg" class="rounded mb-4"
-                    alt="Milk Tea">
-                <h3 class="font-bold">Creamy Milk Tea</h3>
+                <img src="/static/product/p12.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Milk Tea">
+                <h3 class="font-bold text-lg">Creamy Milk Tea</h3>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Management Team -->
-<section class="py-16 bg-white">
+
+<!-- ================= Management Team ================= -->
+<section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-extrabold mb-10">Management Team</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 p-6 rounded-xl shadow">
+        <h2 class="text-3xl font-extrabold mb-12">Management Team</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
                 <img src="https://img.freepik.com/free-icon/user_318-563642.jpg"
                     class="w-24 h-24 mx-auto rounded-full mb-4">
                 <h3 class="font-bold">Alfia Fathima Thaju</h3>
                 <p class="text-gray-600 text-sm">Managing Partner</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-xl shadow">
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
                 <img src="https://img.freepik.com/free-icon/user_318-563642.jpg"
                     class="w-24 h-24 mx-auto rounded-full mb-4">
                 <h3 class="font-bold">Beegum Yasmin</h3>
                 <p class="text-gray-600 text-sm">Managing Partner</p>
             </div>
-            <div class="bg-gray-50 p-6 rounded-xl shadow">
+            <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
                 <img src="https://img.freepik.com/free-icon/user_318-563642.jpg"
                     class="w-24 h-24 mx-auto rounded-full mb-4">
                 <h3 class="font-bold">Uvaiz</h3>
@@ -157,16 +158,22 @@
     </div>
 </section>
 
-<!-- Sustainability & Growth -->
-<section class="bg-fixed bg-cover bg-center py-20 text-center text-white"
+
+<!-- ================= Sustainability & Growth ================= -->
+<section class="relative bg-fixed bg-cover bg-center py-24 text-center text-white"
     style="background-image: url('/static/product/p3.jpg');">
-    <div class="bg-black/50 absolute inset-0"></div>
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+
     <div class="relative z-10 max-w-4xl mx-auto">
         <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Sustainability & Growth</h2>
-        <p class="text-lg mb-4 text-gray-100">Committed to eco-friendly packaging, minimizing waste, supporting local artisans, and
-            expanding across the GCC with franchises, pop-ups, and delivery options.</p>
+        <p class="text-lg mb-8 leading-relaxed text-white">
+            Committed to eco-friendly packaging, minimizing waste, supporting local artisans, 
+            and expanding across the GCC with franchises, pop-ups, and delivery options.
+        </p>
         <a href="/contact"
-            class="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-full shadow-lg">
+            class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105">
             Contact Us
         </a>
     </div>

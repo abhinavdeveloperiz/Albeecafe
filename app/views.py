@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Products,GalleryImage
 # Create your views here.
 
 
@@ -12,8 +12,16 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def services(request):
-    return render(request, 'services.html')
+def Product(request):
+    products = Products.objects.all()
+    return render(request, 'product.html', {'products': products})
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    featured_images = GalleryImage.objects.filter(featured=True).order_by('-created_at')[:3]
+    all_images = GalleryImage.objects.all().order_by('-created_at')
+    context={
+        'featured_images':featured_images,
+        'all_images':all_images
+        
+    }
+    return render(request, 'gallery.html',context)
