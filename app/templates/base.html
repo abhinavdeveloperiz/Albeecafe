@@ -103,7 +103,29 @@
       width: auto;
     }
   </style>
+
+
+  <!-- loader  -->
+  <style>
+    /* Loader fade-out */
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+
 </head>
+
+
+<!-- Page Loader -->
+<div id="loader"
+  class="fixed inset-0 bg-white flex items-center justify-center z-[9999] transition-opacity duration-700">
+  <img src="{% static 'images/logo.png' %}" alt="Loading..." class="h-24 w-auto animate-pulse">
+</div>
+
+
+
+
 
 
 <!-- Floating WhatsApp & Call Buttons -->
@@ -155,7 +177,7 @@
 
         <!-- CTA Button -->
         <div class="hidden lg:flex">
-         
+
         </div>
 
         <!-- Mobile Menu Button -->
@@ -175,7 +197,7 @@
         <a href="/product" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Products</a>
         <a href="/gallery" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Gallery</a>
         <a href="/contact" class="block text-gray-800 hover:text-blue-600 text-base font-medium">Contact</a>
-       
+
       </div>
     </div>
   </nav>
@@ -238,6 +260,16 @@
           class="text-white">Inspirezest Technologies Pvt Ltd</span></a>
     </div>
   </footer>
+
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.classList.add("hidden");
+    });
+  </script>
+
+
 
 
   <script>
