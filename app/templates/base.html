@@ -125,22 +125,47 @@
 
   <!-- loader  -->
   <style>
-    /* Loader fade-out */
-    #loader.hidden {
-      opacity: 0;
-      visibility: hidden;
+    /* Loader wrapper covers the whole page */
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #loader img {
+      width: 150px;
+      /* adjust size */
+      height: auto;
+    }
+
+    /* Hide loader once page is loaded */
+    body.loaded #loader {
+      display: none;
     }
   </style>
 
 </head>
 
 
-<!-- Page Loader -->
-<div id="loader"
-  class="fixed inset-0 bg-white flex items-center justify-center z-[9999] transition-opacity duration-700">
-  <img src="{% static 'images/logo.png' %}" alt="Loading..." class="h-24 w-auto animate-pulse">
+<div id="loader">
+  <img src="{% static 'gif/loader.gif' %}" alt="Loading...">
 </div>
 
+
+
+<script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+    document.getElementById("content").style.display = "block";
+  });
+</script>
 
 
 
@@ -162,6 +187,8 @@
   </a>
 
 </div>
+
+
 
 
 
@@ -241,8 +268,8 @@
         </p>
         <div class="flex space-x-4 mt-4">
           <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/albeecafe/" class="hover:text-pink-500"><i
-              class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/albeecafe/?utm_source=ig_web_button_share_sheet"
+            class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
           <a href="#" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
